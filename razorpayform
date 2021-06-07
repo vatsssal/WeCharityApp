@@ -1,0 +1,22 @@
+<form method="POST" action="https://api.razorpay.com/v1/checkout/embedded">
+				  <input type="hidden" name="key_id" value="rzp_test_tB0N3KreyNLVpg">
+				  <input type="hidden" name="name" value="<?php echo $company_name; ?>">
+				  <input type="hidden" name="amount" value="<?php echo $order_total*100; ?>">
+				  <input type="hidden" name="description" value="<?php echo $company_description; ?>">
+				  <input type="hidden" name="image" value="<?php echo $site_url;?>images/logo.png">
+				  <input type="hidden" name="prefill[name]" value="<?php echo $full_name; ?>">
+				  <input type="hidden" name="prefill[contact]" value="<?php echo $order_phone; ?>">
+				  <input type="hidden" name="prefill[email]" value="<?php echo $order_mail; ?>">
+				  <!--Address changes-->
+				  <input type="hidden" name="notes[shipping address]" value="<?php echo $order_country; ?>">
+				  <input type="hidden" name="notes[shipping address]" value="<?php echo $order_state; ?>">
+				  <input type="hidden" name="notes[shipping address]" value="<?php echo $order_city; ?>">
+				  <input type="hidden" name="notes[shipping address]" value="<?php echo $order_pincode; ?>">
+				  <input type="hidden" name="notes[shipping address]" value="<?php echo $order_add1; ?>">
+				  <input type="hidden" name="notes[shipping address]" value="<?php echo $order_add2; ?>">
+
+				 <!-- <input type="hidden" name="notes[shipping address]" value="<?php echo $order_address; ?>">-->
+				  <input type="hidden" name="callback_url" value="<?php echo $site_url; ?>active.php?oid=<?php echo $sql3; ?>&uid=<?php echo $uid; ?>">
+				<input type="hidden" name="cancel_url" value="<?php echo $site_url; ?>/Cancel/<?php echo $sql3; ?>">
+				  <button type="submit" id="btnsubmit" style="display:none;">Submit</button>
+				</form>
