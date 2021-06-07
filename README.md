@@ -1,1 +1,2 @@
 # WeCharityApp
+Core PHP App
